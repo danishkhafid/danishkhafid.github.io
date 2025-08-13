@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log Book Engineering (Desain Baru) - WIP Cereal Opak</title>
+    <title>Log Book Engineering (Final) - WIP Cereal Opak</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body { 
             font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5; /* Fallback background */
-            background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+            background-color: #f0f2f5;
+            background-image: 
+                linear-gradient(rgba(240, 242, 245, 0.8), rgba(240, 242, 245, 0.8)),
+                url('http://googleusercontent.com/file_content/1');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #f1f1f1; }
@@ -58,28 +63,28 @@
             <h2 class="text-2xl font-semibold mb-6 text-center text-gray-700">Buat Laporan Baru</h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                 <!-- Shift A -->
-                <button data-shift="Shift A" class="add-log-btn menu-card bg-gradient-to-br from-blue-400 to-blue-600 text-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center space-y-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <button data-shift="Shift A" class="add-log-btn menu-card bg-gradient-to-br from-blue-400 to-blue-600 text-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center space-y-2 h-32">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     <span class="font-bold text-lg">Shift A</span>
-                    <span class="text-xs opacity-80">Samsul Umam</span>
+                    <span class="text-xs font-medium opacity-90">Samsul Umam</span>
                 </button>
                 <!-- Shift B -->
-                <button data-shift="Shift B" class="add-log-btn menu-card bg-gradient-to-br from-yellow-400 to-orange-500 text-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center space-y-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                <button data-shift="Shift B" class="add-log-btn menu-card bg-gradient-to-br from-yellow-400 to-orange-500 text-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center space-y-2 h-32">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                     <span class="font-bold text-lg">Shift B</span>
-                    <span class="text-xs opacity-80">Heriyatman</span>
+                    <span class="text-xs font-medium opacity-90">Heriyatman</span>
                 </button>
                 <!-- Shift C -->
-                <button data-shift="Shift C" class="add-log-btn menu-card bg-gradient-to-br from-indigo-500 to-purple-700 text-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center space-y-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 1 0 10 10" /><path d="M12 2A7 7 0 1 0 2 12" /><path d="M12 2v20" /><path d="M22 12H2" /></svg>
+                <button data-shift="Shift C" class="add-log-btn menu-card bg-gradient-to-br from-indigo-500 to-purple-700 text-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center space-y-2 h-32">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 1 0 10 10" /><path d="M12 2A7 7 0 1 0 2 12" /><path d="M12 2v20" /><path d="M22 12H2" /></svg>
                     <span class="font-bold text-lg">Shift C</span>
-                    <span class="text-xs opacity-80">Dollis Fredy</span>
+                    <span class="text-xs font-medium opacity-90">Dollis Fredy</span>
                 </button>
                 <!-- Non Shift -->
-                <button data-shift="Non Shift" class="add-log-btn menu-card bg-gradient-to-br from-gray-500 to-gray-700 text-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center space-y-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <button data-shift="Non Shift" class="add-log-btn menu-card bg-gradient-to-br from-gray-500 to-gray-700 text-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center space-y-2 h-32">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mb-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                     <span class="font-bold text-lg">Non Shift</span>
-                    <span class="text-xs opacity-80">Khairul Iman</span>
+                    <span class="text-xs font-medium opacity-90">Khairul Iman</span>
                 </button>
             </div>
         </div>
@@ -158,18 +163,23 @@
     <!-- Firebase SDK -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, collection, addDoc, onSnapshot, deleteDoc, doc, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
         import { getStorage, ref, uploadString, getDownloadURL, deleteObject } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-storage.js";
 
+        // --- Konfigurasi dan Inisialisasi Firebase ---
+        // KUNCI DARI PROYEK FIREBASE ANDA SENDIRI
         const firebaseConfig = {
-            apiKey: "AIzaSyByWFZfxA4MCU2NasM4RFgtXszDkzEr4EY",
-            authDomain: "log-book-engineering.firebaseapp.com",
-            projectId: "log-book-engineering",
-            storageBucket: "log-book-engineering.firebasestorage.app",
-            messagingSenderId: "649026651638",
-            appId: "1:649026651638:web:eb76154fb38ff4b343b3d7"
+          apiKey: "AIzaSyDaBpUotEAHLydXDxUA_fIQmFeS9eqhhwE",
+          authDomain: "log-book-engineering-wip-cerea.firebaseapp.com",
+          projectId: "log-book-engineering-wip-cerea",
+          storageBucket: "log-book-engineering-wip-cerea.appspot.com",
+          messagingSenderId: "23482631888",
+          appId: "1:23482631888:web:7a8c6431a69dbc960740d5"
         };
+
+        // Variabel appId sekarang diambil dari projectId Anda
+        const appId = firebaseConfig.projectId;
 
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
@@ -177,8 +187,10 @@
         const storage = getStorage(app);
         
         let currentUserId = null;
+        // Path koleksi sekarang menggunakan appId yang benar
         const logsCollectionRef = collection(db, `artifacts/${appId}/public/data/logs`);
 
+        // Sisa kode JavaScript sama persis...
         const logContainer = document.getElementById('log-container');
         const noLogsMessage = document.getElementById('no-logs');
         const downloadButton = document.getElementById('download-excel');
@@ -268,8 +280,7 @@
                 }
             });
             try {
-                if (initialAuthToken) await signInWithCustomToken(auth, initialAuthToken);
-                else await signInAnonymously(auth);
+                await signInAnonymously(auth);
             } catch (error) {
                 console.error("Authentication failed:", error);
                 authStatus.textContent = 'Gagal melakukan autentikasi.';
